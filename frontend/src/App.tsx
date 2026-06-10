@@ -1,10 +1,8 @@
+import { RouterProvider } from "react-router-dom";
+import { router } from "./app/routers";
+
 function App() {
-  return (
-    <div>
-      <h1>TripMate</h1>
-      <p>AI Assisted Travel Planning Platform</p>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
