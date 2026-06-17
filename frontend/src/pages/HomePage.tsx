@@ -1,3 +1,7 @@
+import Navbar from "../shared/components/Navbar";
+
 export default function HomePage() {
-  return <h1>TripMate Home</h1>;
+  return (
+    <Navbar />
+  );
 }
