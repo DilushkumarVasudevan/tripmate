@@ -7,7 +7,7 @@
 
     gap: 2rem;
 
-    padding: 1.5rem 2rem 3rem;
+    padding: 1rem 2rem 2.5rem;
     
 }
 
@@ -73,7 +73,7 @@
 }
 
 .feature-section .card:hover .feature-icon {
-    transform: scale(1.08);
+     transform: scale(1.08) rotate(-5deg);
 }
 
 .feature-icon {
