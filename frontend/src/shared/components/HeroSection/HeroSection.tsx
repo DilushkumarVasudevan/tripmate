@@ -1,8 +1,14 @@
-import { Link } from "react-router-dom";
 import heroImage from "../../../assets/images/HeroImage.png";
-import './HeroSection.css'
+import './HeroSection.css';
 
-export default function HeroSection() {
+
+
+type HeroSectionProps = {
+    onLoginClick: () => void;
+    onRegisterClick: () => void;
+};
+
+export default function HeroSection({ onLoginClick, onRegisterClick }: HeroSectionProps) {
 
     return (
 
@@ -14,15 +20,23 @@ export default function HeroSection() {
                     Better. <span>Smarter.</span> Easier.
                 </h1>
                 <p>AI-powered collaborative travel planning platform for unforgettable journeys. </p>
-            <div className="hero-actions">
-                <Link to="/login" className="btn">
-                    Get Started
-                </Link>
+                <div className="hero-actions">
 
-                <Link to="/register" className="btn btn-secondary">
-                    Sign Up
-                </Link>
-            </div>
+                    <button
+                        className="btn"
+                        onClick={onLoginClick}
+                    >
+                        Get Started
+                    </button>
+
+
+                    <button
+                        className="btn btn-secondary"
+                        onClick={onRegisterClick}
+                    >
+                        Sign Up
+                    </button>
+                </div>
             </div>
             <div className="hero-image">
                 <img src={heroImage} alt="Friends planning a trip together using TripMate" />
