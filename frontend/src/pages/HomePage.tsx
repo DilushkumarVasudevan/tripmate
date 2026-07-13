@@ -4,6 +4,8 @@ import HeroSection from "../shared/components/HeroSection/HeroSection";
 import Navbar from "../shared/components/Navbar/Navbar";
 import { useState } from "react";
 import Modal from "../shared/ui/Modal";
+import AuthLayout from "../shared/components/AuthLayout";
+import LoginForm from "../shared/components/LoginForm";
 
 export default function HomePage() {
   const [modalType, setModalType] =
@@ -18,7 +20,9 @@ export default function HomePage() {
         isOpen={modalType !== null}
         onClose={() => setModalType(null)}
       >
-        <h2>Hello TripMate 👋</h2>
+        <AuthLayout> 
+          <LoginForm />
+        </AuthLayout>
       </Modal>
       <Footer />
     </>
